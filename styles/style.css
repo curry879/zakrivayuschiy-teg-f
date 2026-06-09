@@ -1,25 +1,38 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
+  position: relative;
+  isolation: isolate;
+
   min-inline-size: 320px;
   min-block-size: 100dvb;
+
   font-family: var(--main-font);
   font-variation-settings: "wght" var(--main-text-weight);
   color: var(--text-color);
-  background-color: var(--page-background-color);
+
+  background-color: #ffffff;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+
+  inline-size: 100%;
+  block-size: 1000px;
+  transform: translateY(-100px);
+
   background-image: var(--page-background-image);
-  background-size: cover;
-  background-attachment: fixed;
+  background-repeat: repeat, no-repeat;
+  background-size:
+    4px 4px,
+    cover;
+  background-position:
+    top left,
+    top center;
+
+  pointer-events: none;
+  z-index: -1;
 }
 
 .content-section {
@@ -28,12 +41,20 @@
 }
 
 .header {
-  margin-block-start: 100px;
-  padding: clamp(120px, 10vw, 136px) clamp(14px, 2vw, 120px) 25px;
+  margin-block-start: 60px;
+  padding: clamp(0px, 9vw, 136px) clamp(14px, 2vw, 120px) 25px;
   border: 2px solid var(--accent-color);
   font-family: var(--accent-font);
   text-align: center;
+  height: 370px;
   background-color: var(--page-background-color);
+  position: relative;
+  top: 38px;
+}
+
+.main {
+  position: relative;
+  top: 37px;
 }
 
 .header__title {
@@ -55,24 +76,22 @@
 
 .cards-list {
   display: grid;
-  gap: 50px;
+  gap: 51px;
 }
 
 .card {
-  border: 2px solid var(--accent-color);
+  border: 0.11rem solid var(--accent-color);
   background-color: var(--page-background-color);
 }
 
 .card__title {
-  padding: 5px 10px;
+  padding: 5px 11px 4px 11px;
   font-size: 18px;
   font-variation-settings: "wght" var(--title-text-weight);
 }
 
 .card__image-wrapper {
   position: relative;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
 }
 
 .card__image {
@@ -109,7 +128,7 @@
 }
 
 .card__content {
-  padding: 25px;
+  padding: 24px 25px 25px 25px;
 }
 
 .card__text {
@@ -118,7 +137,7 @@
 }
 
 .card__text:not(:last-of-type) {
-  margin-block-end: 27px;
+  margin-block-end: 25px;
 }
 
 .card__buttons {
@@ -141,7 +160,6 @@
   cursor: pointer;
   transition: outline 0.3s ease;
 }
-
 
 .card__icon-button:focus {
   outline: none;
@@ -186,7 +204,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
@@ -308,4 +326,3 @@
 .filter-multiple {
   filter: hue-rotate(35deg) saturate(1.5) brightness(0.8);
 }
-
