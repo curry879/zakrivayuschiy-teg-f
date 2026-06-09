@@ -55,6 +55,7 @@
 .main {
   position: relative;
   top: 37px;
+  padding-block-start: 100px;
 }
 
 .header__title {
@@ -68,10 +69,6 @@
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
   text-transform: uppercase;
-}
-
-.main {
-  padding-block-start: 100px;
 }
 
 .cards-list {
