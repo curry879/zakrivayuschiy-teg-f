@@ -2,8 +2,8 @@
   --main-font: 'Inter', sans-serif;
   --accent-font: 'PressStart2P', fantasy;
 
-  --main-text-weight: 400;
-  --title-text-weight: 700;
+  --main-text-weight: 410;
+  --title-text-weight: 715;
 
   --page-background-color: #ffffff;
   --accent-color: #000000;
@@ -15,7 +15,6 @@
   --content-width: clamp(375px, 100%, 700px);
 
   --page-background-image:
-  url("../images/1.png"),
-  linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  
+    url("../images/1.png"),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
