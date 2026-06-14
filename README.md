@@ -59,5 +59,6 @@
 
 ## Ссылка на проект
 
-
 GitHub: https://github.com/curry879/zakrivayuschiy-teg-f
+
+GitHub Pages: https://curry879.github.io/zakrivayuschiy-teg-f/
